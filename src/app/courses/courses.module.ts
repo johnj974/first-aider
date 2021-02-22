@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CoursesRoutingModule } from './courses-routing.module';
+import { MainCourseComponent } from './main-course/main-course.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [MainCourseComponent],
   imports: [
     CommonModule,
     CoursesRoutingModule
