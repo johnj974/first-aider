@@ -1,1 +1,56 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row py-4">
+      <div class="col-md-4 px-4">
+        <!-- <h5 class="my-2">Find Us</h5> -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          mollitia sunt esse. Possimus, vero perferendis minus blanditiis
+          delectus quo ab?
+        </p>
+        <p><i class="fa fa-location-arrow"></i> 123 Fake St. Dublin</p>
+        <p><i class="fa fa-phone"></i> +353 01-15412</p>
+        <p><i class="fa fa fa-envelope"></i> info@moreInfo.com</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <!-- <h5 class="my-2">Pages</h5> -->
+        <img src="../../../assets/images/logo-white.png" alt="" class="py-4" />
+        <p>Copyright &#169; 2021</p>
+      </div>
+      <div class="col-md-4">
+        <!-- <h5 class="my-2">Find Us</h5> -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/courses" routerLinkActive="active"
+              >Courses</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/faqs" routerLinkActive="active"
+              >FAQ</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/shop" routerLinkActive="active"
+              >Shop</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
