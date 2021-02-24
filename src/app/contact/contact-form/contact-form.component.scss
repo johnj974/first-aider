@@ -3,10 +3,9 @@
 form {
   margin: 0 auto;
   padding: 20px 20px;
-  //border: 1px solid red;
   border-radius: 5px;
   margin: 40px 20px;
-  box-shadow: 10px 10px 20px black;
+  box-shadow: 10px 10px 20px $color-blue;
 
   & label {
     color: $color-blue;
@@ -21,6 +20,25 @@ form {
   }
 }
 
+.btn {
+  background-color: $color-blue;
+  color: $color-white;
+  border-radius: 20px;
+}
+
 .contact-box {
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .info-box {
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px $color-blue;
+
+    & p .fa {
+      color: $color-crimson;
+    }
+  }
 }
