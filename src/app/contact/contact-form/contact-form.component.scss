@@ -1,11 +1,23 @@
 @import "../../../styles/styles.scss";
 
-.form-box {
-  //background-color: red;
+form {
+  margin: 0 auto;
+  padding: 20px 20px;
+  //border: 1px solid red;
+  border-radius: 5px;
+  margin: 40px 20px;
+  box-shadow: 10px 10px 20px black;
 
-  & form {
-    margin: 0 auto;
-    padding: 20px 20px;
+  & label {
+    color: $color-blue;
+    padding-left: 15px;
+  }
+
+  & input,
+  & textarea {
+    border: transparent;
+    border-left: 1px solid $color-blue;
+    border-bottom: 1px solid $color-blue;
   }
 }
 

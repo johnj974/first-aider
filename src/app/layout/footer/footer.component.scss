@@ -2,11 +2,12 @@
 
 .footer {
   //position: fixed;
+  padding-top: 100px;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: $color-blue;
-  color: $color-white;
+  background-image: linear-gradient(to top, $color-blue, $color-white);
+  color: $color-active;
 
   h5 {
     text-decoration: underline;
@@ -16,7 +17,7 @@
 }
 
 .nav-link {
-  color: $color-white;
+  color: $color-active;
   font-weight: 200;
 
   &:hover {

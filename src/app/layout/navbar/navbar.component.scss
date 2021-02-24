@@ -1,7 +1,9 @@
 @import "../../../styles/helpers/variables";
 
 .navbar {
-  background-color: $color-blue;
+  //background-color: $color-blue;
+  background-image: linear-gradient(to bottom, $color-blue, $color-white);
+  //padding-bottom: 100px;
 
   &-brand {
     padding-bottom: 0;
