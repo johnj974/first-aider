@@ -1,7 +1,12 @@
 @import "../../../styles/styles.scss";
 
 .form-box {
-  background-color: red;
+  //background-color: red;
+
+  & form {
+    margin: 0 auto;
+    padding: 20px 20px;
+  }
 }
 
 .contact-box {

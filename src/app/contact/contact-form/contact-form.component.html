@@ -1,7 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 form-box">
-      <form>
+      <form
+        class="py-5"
+        (ngSubmit)="onCaptureForm(formData)"
+        #formData="ngForm"
+      >
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input
@@ -10,6 +14,8 @@
             id="name"
             placeholder="Full Name"
             required
+            name="name"
+            ngModel
           />
         </div>
         <div class="mb-3">
@@ -20,6 +26,8 @@
             id="email"
             placeholder="Valid email"
             required
+            name="email"
+            ngModel
           />
           <div class="form-text">
             We'll never share your email with anyone else.
@@ -28,11 +36,13 @@
         <div class="mb-3">
           <label for="phone" class="form-label">Phone</label>
           <input
-            type="number"
+            type="text"
             class="form-control"
             id="phone"
             placeholder="Phone"
             required
+            name="phone"
+            ngModel
           />
         </div>
         <div class="mb-3">
@@ -43,6 +53,8 @@
             id="subject"
             placeholder="Subject"
             required
+            name="subject"
+            ngModel
           />
         </div>
         <div class="mb-3">
@@ -53,8 +65,11 @@
             cols="30"
             rows="10"
             class="form-control"
+            required
+            ngModel
           ></textarea>
         </div>
+        <button class="btn btn-primary">Primary</button>
       </form>
     </div>
     <div class="col-md-6 contact-box">Additional info here</div>
