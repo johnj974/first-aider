@@ -2,7 +2,7 @@
 
 .navbar {
   //background-color: $color-blue;
-  background-image: linear-gradient(to bottom, $color-blue, $color-white);
+  background-image: linear-gradient(to bottom, $color-blue, $color-paleBlue);
   //padding-bottom: 100px;
 
   &-brand {
@@ -35,4 +35,10 @@
 
 .fa {
   color: $color-white;
+}
+
+@media only screen and (max-width: 990px) {
+  .nav-link {
+    color: $color-active;
+  }
 }

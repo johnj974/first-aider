@@ -6,7 +6,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-image: linear-gradient(to top, $color-blue, $color-white);
+  background-image: linear-gradient(to top, $color-blue, $color-paleBlue);
   color: $color-active;
 
   h5 {
@@ -25,7 +25,7 @@
   }
 }
 
-.copyright {
+.copyright p {
   border-top: 1px solid $color-white;
 }
 
