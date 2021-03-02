@@ -1,0 +1,10 @@
+@import "../../../styles/styles.scss";
+
+section {
+  background-image: linear-gradient(to bottom left, $color-blue, $color-active);
+}
+
+.shop {
+  color: $color-white;
+  height: 600px;
+}

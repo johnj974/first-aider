@@ -1,7 +1,10 @@
 @import "../../../styles/styles.scss";
 
+section {
+  //background-color: $color-blue;
+  background-image: linear-gradient(to top right, $color-blue, $color-active);
+}
+
 .about {
-  background-color: $color-blue;
   color: $color-white;
-  height: 500px;
 }

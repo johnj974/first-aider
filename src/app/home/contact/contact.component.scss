@@ -1,0 +1,18 @@
+@import "../../../styles/styles.scss";
+
+section {
+  background-color: $color-paleBlue;
+}
+
+.contact {
+  height: 500px;
+}
+
+h2,
+p {
+  color: $color-blue;
+}
+
+// p {
+//   color: $color-active;
+// }

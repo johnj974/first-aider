@@ -10,24 +10,9 @@
   }
 }
 
-.courses {
-  padding: 10px 10%;
-}
-
 .card {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 10px;
   border: none;
-}
-
-@media only screen and (max-width: 1200px) {
-  .card {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .courses {
-    padding: 20px;
-  }
 }

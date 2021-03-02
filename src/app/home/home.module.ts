@@ -5,10 +5,13 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
+import { ShopComponent } from './shop/shop.component';
 
 
 @NgModule({
-  declarations: [MainHomeComponent, CoursesComponent, AboutComponent],
+  declarations: [MainHomeComponent, CoursesComponent, AboutComponent, ContactComponent, TestimonialComponent, ShopComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
