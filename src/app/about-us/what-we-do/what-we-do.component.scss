@@ -1,0 +1,13 @@
+@import "../../../styles/styles.scss";
+
+section {
+  background-image: linear-gradient(
+    to bottom right,
+    $color-blue,
+    $color-active
+  );
+}
+
+.what-we-do {
+  height: 500px;
+}

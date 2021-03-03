@@ -1,0 +1,14 @@
+@import "../../../styles/styles.scss";
+
+.who-we-are {
+  background-color: $color-paleBlue;
+
+  &_text {
+    padding: 100px 10px;
+  }
+
+  h3,
+  p {
+    color: $color-blue;
+  }
+}
