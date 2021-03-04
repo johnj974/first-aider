@@ -10,15 +10,15 @@
   color: $color-active;
 
   h5 {
-    text-decoration: underline;
     text-align: center;
-    font-weight: 200;
+    font-weight: 400;
   }
 }
 
 .nav-link {
   color: $color-active;
   font-weight: 200;
+  padding: 0;
 
   &:hover {
     text-decoration: underline;
