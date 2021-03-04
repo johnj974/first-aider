@@ -29,10 +29,12 @@ form {
   background-color: $color-blue;
   color: $color-white;
   border-radius: 20px;
+  transition: all 0.2s;
 
   &:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-3px);
   }
 }
 
@@ -52,7 +54,7 @@ form {
     }
 
     & p {
-      color: $color-active;
+      color: $color-blue;
     }
 
     & p .fa {
