@@ -1,0 +1,19 @@
+.btn-blue {
+  //background-color: $color-active;
+  background-image: radial-gradient($color-blue, $color-active);
+  color: $color-white;
+  border-radius: 20px;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-1px) scale(0.98);
+  }
+}
