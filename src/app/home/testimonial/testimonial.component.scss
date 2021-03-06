@@ -7,3 +7,22 @@ section {
 .testimonial {
   height: 500px;
 }
+
+.testimonial-box {
+  border: 1px solid $color-blue;
+  padding: 100px;
+  margin: 50px 0;
+  //background-color: $color-blue;
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonial-box {
+    padding: 50px;
+  }
+}
+
+.col-md-3 {
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+}
