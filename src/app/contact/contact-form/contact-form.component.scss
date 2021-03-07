@@ -22,7 +22,18 @@ form {
     border-left: 1px solid $color-blue;
     border-bottom: 1px solid $color-blue;
     background-color: $color-paleBlue;
+    border-radius: 0;
   }
+
+  & input.ng-invalid.ng-touched,
+  textarea.ng-invalid.ng-touched {
+    border-left: 1px solid $color-crimson;
+    border-bottom: 1px solid $color-crimson;
+  }
+}
+
+.small {
+  color: $color-crimson;
 }
 
 .contact-box {

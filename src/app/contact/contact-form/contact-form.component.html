@@ -13,10 +13,17 @@
             class="form-control"
             id="name"
             placeholder="Full Name"
-            required
-            name="name"
             ngModel
+            name="name"
+            required
+            #nameInput="ngModel"
           />
+          <div
+            class="form-text small"
+            *ngIf="!nameInput.value && nameInput.touched"
+          >
+            Please enter a valid name.
+          </div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email Address</label>
@@ -25,12 +32,20 @@
             class="form-control"
             id="email"
             placeholder="Valid email"
-            required
-            name="email"
             ngModel
+            name="email"
+            required
+            email
+            #emailInput="ngModel"
           />
           <div class="form-text text-muted small">
             We'll never share your email with anyone else.
+          </div>
+          <div
+            class="form-text small"
+            *ngIf="!emailInput.value && emailInput.touched"
+          >
+            Please enter a valid email.
           </div>
         </div>
         <div class="mb-3">
@@ -40,10 +55,17 @@
             class="form-control"
             id="phone"
             placeholder="Phone"
-            required
-            name="phone"
             ngModel
+            name="phone"
+            required
+            #phoneInput="ngModel"
           />
+          <div
+            class="form-text small"
+            *ngIf="!phoneInput.value && phoneInput.touched"
+          >
+            Please enter a valid phone number.
+          </div>
         </div>
         <div class="mb-3">
           <label for="subject" class="form-label">Subject</label>
@@ -52,10 +74,17 @@
             class="form-control"
             id="subject"
             placeholder="Subject"
-            required
-            name="subject"
             ngModel
+            name="subject"
+            required
+            #subjectInput="ngModel"
           />
+          <div
+            class="form-text small"
+            *ngIf="!subjectInput.valid && subjectInput.touched"
+          >
+            Please enter a subject.
+          </div>
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
@@ -66,11 +95,20 @@
             rows="10"
             class="form-control"
             placeholder="Message"
-            required
             ngModel
+            required
+            #messageInput="ngModel"
           ></textarea>
+          <div
+            class="form-text small"
+            *ngIf="!messageInput.value && messageInput.touched"
+          >
+            Please enter a message.
+          </div>
         </div>
-        <button class="btn btn-blue">Send Message</button>
+        <button class="btn btn-blue" type="submit" [disabled]="!formData.valid">
+          Send Message
+        </button>
       </form>
     </div>
     <div class="col-lg-6 contact-box">
