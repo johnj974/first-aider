@@ -109,6 +109,9 @@
         <button class="btn btn-blue" type="submit" [disabled]="!formData.valid">
           Send Message
         </button>
+        <div class="form-text text-muted small" *ngIf="thankYou">
+          Thank You for your interest.
+        </div>
       </form>
     </div>
     <div class="col-lg-6 contact-box">
