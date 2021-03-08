@@ -1,0 +1,9 @@
+// .card {
+//   border: 2px solid $color-blue;
+// }
+@import "../../../styles/styles.scss";
+
+.card {
+  border: 2px solid $color-blue;
+  background-color: $color-paleBlue;
+}

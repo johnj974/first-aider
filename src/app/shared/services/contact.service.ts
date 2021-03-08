@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Contact } from '../contact.model';
+import { Contact } from '../models/contact.model';
 
 @Injectable({ providedIn: 'root' })
 export class Contactservice {
