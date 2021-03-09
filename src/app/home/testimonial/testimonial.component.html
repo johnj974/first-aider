@@ -7,30 +7,18 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
         <footer class="blockquote-footer mb-4">
-          Someone famous in
-          <cite title="Source Title">Source Title</cite>
+          Sean Burke
+          <cite title="Source Title">Care Assistant</cite>
         </footer>
-        <p class="mb-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <footer class="blockquote-footer mb-4">
-          Someone famous in
-          <cite title="Source Title">Source Title</cite>
-        </footer>
-        <p class="mb-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <footer class="blockquote-footer mb-4">
-          Someone famous in
-          <cite title="Source Title">Source Title</cite>
-        </footer>
-        <p class="mb-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <footer class="blockquote-footer mb-4">
-          Someone famous in
-          <cite title="Source Title">Source Title</cite>
-        </footer>
+        <div *ngFor="let quote of testimonialArray">
+          <p class="mb-0">
+            {{ quote.statement | reduceText }}
+          </p>
+          <footer class="blockquote-footer mb-4">
+            {{ quote.person }}
+            <cite title="Source Title">{{ quote.position }}</cite>
+          </footer>
+        </div>
       </div>
       <div class="col-md-6 d-none d-md-block">
         <div
@@ -55,25 +43,19 @@
                 </footer>
               </div>
             </div>
-            <div class="carousel-item testimonial-box">
-              <h3>Lorem, ipsum.1</h3>
+            <div
+              class="carousel-item testimonial-box"
+              *ngFor="let testimonial of testimonialArray"
+            >
+              <h3>{{ testimonial.title }}</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                consectetur quod optio exercitationem, nostrum quas adipisci
-                esse, quia deleniti atque necessitatibus mollitia delectus?
-                Nihil, iste.
+                {{ testimonial.statement }}
               </p>
-              <p>Lorem, ipsum.</p>
-            </div>
-            <div class="carousel-item testimonial-box">
-              <h3>Lorem, ipsum.2</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                consectetur quod optio exercitationem, nostrum quas adipisci
-                esse, quia deleniti atque necessitatibus mollitia delectus?
-                Nihil, iste.
-              </p>
-              <p>Lorem, ipsum.</p>
+              <p>{{ testimonial.person }}</p>
+              <footer class="blockquote-footer">
+                {{ testimonial.position }}
+                <cite title="Source Title">{{ testimonial.company }}</cite>
+              </footer>
             </div>
             <!---TEMPORARY FIX FOR CAROUSEL JUMPING-->
             <div class="carousel-item"></div>
