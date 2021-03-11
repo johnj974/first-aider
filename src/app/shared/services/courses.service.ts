@@ -3,29 +3,42 @@ import { Coursemodel } from '../models/course.model';
 
 @Injectable({ providedIn: 'root' })
 export class CoursesService {
+  randomDate(start, end) {
+    let date = new Date(+start + Math.random() * (end - start));
+    return date;
+  }
+
+  locationArray: string[] = ['Dublin', 'Kerry', 'Limerick', 'Cork', 'Mayo'];
+
+  randomLocation(array) {
+    let randomNumber = Math.trunc(Math.random() * array.length);
+    let result = array[randomNumber];
+    return result;
+  }
+
   coursesArray: Coursemodel[] = [
     new Coursemodel(
       'https://www.trainingexpress.org.uk/wp-content/uploads/2020/04/Emergency-First-Aid-at-Work.png',
       'First Aid Response',
-      '12-7-2019',
+      this.randomDate(new Date(2021, 0, 1), new Date()),
       '10',
-      'dublin',
+      `${this.randomLocation(this.locationArray)}`,
       'some information'
     ),
     new Coursemodel(
       'https://www.trainingexpress.org.uk/wp-content/uploads/2019/10/Workplace-First-Aid-Training-Express-Online-Certification-Course.png',
       'Cardiac First Response',
-      '12-5-2020',
+      this.randomDate(new Date(2021, 0, 1), new Date()),
       '10',
-      'Limerick',
+      `${this.randomLocation(this.locationArray)}`,
       'more information'
     ),
     new Coursemodel(
       'https://www.trainingexpress.org.uk/wp-content/uploads/2019/10/Workplace-First-Aid-Training-Express-Online-Certification-Course.png',
       'Cardiac First Response',
-      '12-5-2020',
+      this.randomDate(new Date(2022, 0, 1), new Date()),
       '10',
-      'Limerick',
+      `${this.randomLocation(this.locationArray)}`,
       'more information'
     ),
   ];

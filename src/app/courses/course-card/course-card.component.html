@@ -1,15 +1,21 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 mt-3" *ngFor="let course of coursesArray">
-        <div class="card">
+      <div
+        class="col-md-6 mt-3"
+        *ngFor="let course of coursesArray; let i = index"
+      >
+        <div class="card" *ngIf="i < 8">
           <img src="{{ course.image }}" class="card-img-top" alt="..." />
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">{{ course.title }}</a>
             </h4>
             <div class="card-info">
-              <p><i class="fa fa-calendar"></i>{{ course.date }}</p>
+              <p>
+                <i class="fa fa-calendar"></i
+                >{{ course.date | date: "dd/MM/yyyy" }}
+              </p>
               <p><i class="fa fa-user"></i>{{ course.people }}</p>
               <p><i class="fa fa-map-marker"></i>{{ course.location }}</p>
             </div>

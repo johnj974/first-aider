@@ -1,7 +1,7 @@
 export class Coursemodel {
   public image: string;
   public title: string;
-  public date: string;
+  public date: Date;
   public people: string;
   public location: string;
   public information: string;
@@ -9,7 +9,7 @@ export class Coursemodel {
   constructor(
     image: string,
     title: string,
-    date: string,
+    date: Date,
     people: string,
     location: string,
     information: string
