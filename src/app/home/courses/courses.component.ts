@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Coursemodel } from 'src/app/shared/models/course.model';
+import { CoursesService } from 'src/app/shared/services/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -7,11 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  constructor(private router: Router) {}
+  courseList: Coursemodel[] = [];
+
+  constructor(private router: Router, private coursesService: CoursesService) {}
 
   onToCourses() {
     this.router.navigate(['/courses']);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.courseList = this.coursesService.coursesArray;
+  }
 }
