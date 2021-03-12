@@ -1,1 +1,36 @@
-<p>course-info works!</p>
+<h3>this is course info page</h3>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-md-6 mt-3"
+        *ngFor="let course of displayCourse; let i = index"
+      >
+        <div class="card mt-3" *ngIf="i < 8">
+          <img src="{{ course.image }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">
+              <a
+                (click)="onShowCourse(i, course.title)"
+                style="cursor: pointer"
+                >{{ course.title }}</a
+              >
+            </h4>
+            <div class="card-info">
+              <p>
+                <i class="fa fa-calendar"></i
+                >{{ course.date | date: "dd/MM/yyyy" }}
+              </p>
+              <p><i class="fa fa-user"></i>{{ course.people }}</p>
+              <p><i class="fa fa-map-marker"></i>{{ course.location }}</p>
+            </div>
+            <p class="card-text">
+              {{ course.information }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

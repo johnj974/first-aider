@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CoursesService } from 'src/app/shared/services/courses.service';
 import { Coursemodel } from '../../shared/models/course.model';
 
@@ -10,7 +11,7 @@ import { Coursemodel } from '../../shared/models/course.model';
 export class CourseCardComponent implements OnInit {
   coursesArray: Coursemodel[] = [];
 
-  constructor(private coursesService: CoursesService) {}
+  constructor(private coursesService: CoursesService, private router: Router) {}
 
   ngOnInit(): void {
     this.coursesArray = this.coursesService.coursesArray;
@@ -18,5 +19,6 @@ export class CourseCardComponent implements OnInit {
 
   onShowCourse(id: number, title: string) {
     console.log(id, title);
+    this.router.navigate(['/courses/', id, title]);
   }
 }
