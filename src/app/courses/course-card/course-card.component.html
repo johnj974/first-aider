@@ -5,11 +5,15 @@
         class="col-md-6 mt-3"
         *ngFor="let course of coursesArray; let i = index"
       >
-        <div class="card" *ngIf="i < 8">
+        <div class="card mt-3" *ngIf="i < 8">
           <img src="{{ course.image }}" class="card-img-top" alt="..." />
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">{{ course.title }}</a>
+              <a
+                (click)="onShowCourse(i, course.title)"
+                style="cursor: pointer"
+                >{{ course.title }}</a
+              >
             </h4>
             <div class="card-info">
               <p>

@@ -15,4 +15,8 @@ export class CourseCardComponent implements OnInit {
   ngOnInit(): void {
     this.coursesArray = this.coursesService.coursesArray;
   }
+
+  onShowCourse(id: number, title: string) {
+    console.log(id, title);
+  }
 }

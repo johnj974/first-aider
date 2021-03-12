@@ -6,7 +6,10 @@
       </div>
     </div>
     <div class="row courses">
-      <div class="col-md-4" *ngFor="let course of courseList; let i = index">
+      <div
+        class="col-md-4 mt-4"
+        *ngFor="let course of courseList; let i = index"
+      >
         <div class="card" *ngIf="i < 3">
           <img
             src="{{ course.image }}"
