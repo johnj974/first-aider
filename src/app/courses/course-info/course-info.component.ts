@@ -14,15 +14,11 @@ export class CourseInfoComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  courseId: number;
+  courseId = this.route.snapshot.params['id'];
 
-  courseInfoArray: Coursemodel[] = [];
+  displayCourse: Coursemodel = this.coursesService.onCourseDisplay(
+    this.courseId
+  );
 
-  ngOnInit(): void {
-    this.courseInfoArray = this.coursesService.coursesArray;
-    this.courseId = this.route.snapshot.params['id'];
-    console.log(this.courseId);
-  }
-
-  displayCourse: Coursemodel = this.courseInfoArray[0];
+  ngOnInit(): void {}
 }

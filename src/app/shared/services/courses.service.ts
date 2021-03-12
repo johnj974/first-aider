@@ -16,6 +16,11 @@ export class CoursesService {
     return result;
   }
 
+  onCourseDisplay(number) {
+    let capturedCourse = this.coursesArray[number];
+    return capturedCourse;
+  }
+
   coursesArray: Coursemodel[] = [
     new Coursemodel(
       'https://www.trainingexpress.org.uk/wp-content/uploads/2020/04/Emergency-First-Aid-at-Work.png',
