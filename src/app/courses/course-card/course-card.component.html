@@ -24,7 +24,7 @@
               <p><i class="fa fa-map-marker"></i>{{ course.location }}</p>
             </div>
             <p class="card-text">
-              {{ course.information }}
+              {{ course.information | wordCut: 50 }}
             </p>
           </div>
         </div>
