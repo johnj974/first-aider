@@ -8,3 +8,9 @@ section {
 .about {
   color: $color-white;
 }
+
+@media only screen and (max-width: 600px) {
+  .button-container {
+    text-align: center;
+  }
+}

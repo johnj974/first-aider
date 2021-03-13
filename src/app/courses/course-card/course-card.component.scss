@@ -7,3 +7,12 @@
   border: 2px solid $color-blue;
   background-color: $color-paleBlue;
 }
+
+h4 {
+  color: $color-blue;
+  transition: all 0.5s;
+
+  &:hover {
+    color: $color-active;
+  }
+}
