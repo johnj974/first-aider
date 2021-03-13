@@ -1,32 +1,32 @@
-<h3>this is course info page</h3>
-<h3>{{ displayCourse.location }}</h3>
 <section>
   <div class="container">
     <div class="row">
-      <div
-        class="col-md-6 mt-3"
-        *ngFor="let course of displayCourse; let i = index"
-      >
-        <div class="card mt-3" *ngIf="i < 8">
-          <img src="{{ course.image }}" class="card-img-top" alt="..." />
+      <div class="col-md-8 offset-md-2">
+        <div class="card mt-3">
+          <img src="{{ displayCourse.image }}" class="card-img-top" alt="..." />
           <div class="card-body">
             <h4 class="card-title">
-              <a
-                (click)="onShowCourse(i, course.title)"
-                style="cursor: pointer"
-                >{{ course.title }}</a
-              >
+              {{ displayCourse.title }}
             </h4>
             <div class="card-info">
               <p>
-                <i class="fa fa-calendar"></i
-                >{{ course.date | date: "dd/MM/yyyy" }}
+                <i class="fa fa-calendar"></i> Date:
+                {{ displayCourse.date | date: "fullDate" }}
               </p>
-              <p><i class="fa fa-user"></i>{{ course.people }}</p>
-              <p><i class="fa fa-map-marker"></i>{{ course.location }}</p>
+              <p>
+                <i class="fa fa-clock-o"></i> Time:
+                {{ displayCourse.time }}
+              </p>
+              <p>
+                <i class="fa fa-user"></i> Persons: {{ displayCourse.people }}
+              </p>
+              <p>
+                <i class="fa fa-map-marker"></i> Location:
+                {{ displayCourse.location }}
+              </p>
             </div>
             <p class="card-text">
-              {{ course.information }}
+              {{ displayCourse.information }}
             </p>
           </div>
         </div>

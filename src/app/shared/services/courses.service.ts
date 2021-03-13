@@ -26,6 +26,7 @@ export class CoursesService {
       'https://www.trainingexpress.org.uk/wp-content/uploads/2020/04/Emergency-First-Aid-at-Work.png',
       'First Aid Response',
       this.randomDate(new Date(2021, 0, 1), new Date()),
+      '9.00 AM',
       '10',
       `${this.randomLocation(this.locationArray)}`,
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam similique at numquam nobis nihil! Iure assumenda sequi sunt sed at cum libero quo blanditiis ipsa veniam officiis dolor necessitatibus voluptas odit adipisci veritatis repellat laudantium expedita magnam, eum voluptatum nam! Quis, porro eos quidem unde sed non reprehenderit maxime est quibusdam enim dolorem itaque illo atque in aliquid repellat explicabo! Atque totam amet adipisci doloremque expedita, facere pariatur, repellendus veniam beatae nemo nam natus error iure. Voluptas voluptate neque ex reiciendis iusto totam quo. Natus, placeat aut quae debitis soluta ipsum qui pariatur sint porro, labore cum ut. Quibusdam, rerum!'
@@ -34,6 +35,7 @@ export class CoursesService {
       'https://www.trainingexpress.org.uk/wp-content/uploads/2019/10/Workplace-First-Aid-Training-Express-Online-Certification-Course.png',
       'Cardiac First Response',
       this.randomDate(new Date(2021, 0, 1), new Date()),
+      '9.00 AM',
       '10',
       `${this.randomLocation(this.locationArray)}`,
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam similique at numquam nobis nihil! Iure assumenda sequi sunt sed at cum libero quo blanditiis ipsa veniam officiis dolor necessitatibus voluptas odit adipisci veritatis repellat laudantium expedita magnam, eum voluptatum nam! Quis, porro eos quidem unde sed non reprehenderit maxime est quibusdam enim dolorem itaque illo atque in aliquid repellat explicabo! Atque totam amet adipisci doloremque expedita, facere pariatur, repellendus veniam beatae nemo nam natus error iure. Voluptas voluptate neque ex reiciendis iusto totam quo. Natus, placeat aut quae debitis soluta ipsum qui pariatur sint porro, labore cum ut. Quibusdam, rerum!'
@@ -42,6 +44,7 @@ export class CoursesService {
       'https://www.trainingexpress.org.uk/wp-content/uploads/2019/10/Workplace-First-Aid-Training-Express-Online-Certification-Course.png',
       'Cardiac First Response',
       this.randomDate(new Date(2022, 0, 1), new Date()),
+      '9.00 AM',
       '10',
       `${this.randomLocation(this.locationArray)}`,
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam similique at numquam nobis nihil! Iure assumenda sequi sunt sed at cum libero quo blanditiis ipsa veniam officiis dolor necessitatibus voluptas odit adipisci veritatis repellat laudantium expedita magnam, eum voluptatum nam! Quis, porro eos quidem unde sed non reprehenderit maxime est quibusdam enim dolorem itaque illo atque in aliquid repellat explicabo! Atque totam amet adipisci doloremque expedita, facere pariatur, repellendus veniam beatae nemo nam natus error iure. Voluptas voluptate neque ex reiciendis iusto totam quo. Natus, placeat aut quae debitis soluta ipsum qui pariatur sint porro, labore cum ut. Quibusdam, rerum!'

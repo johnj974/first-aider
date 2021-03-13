@@ -17,11 +17,17 @@
             </h4>
             <div class="card-info">
               <p>
-                <i class="fa fa-calendar"></i
-                >{{ course.date | date: "dd/MM/yyyy" }}
+                <i class="fa fa-calendar"></i> Date:
+                {{ course.date | date: "fullDate" }}
               </p>
-              <p><i class="fa fa-user"></i>{{ course.people }}</p>
-              <p><i class="fa fa-map-marker"></i>{{ course.location }}</p>
+              <p>
+                <i class="fa fa-clock-o"></i> Time:
+                {{ course.time }}
+              </p>
+              <p><i class="fa fa-user"></i> Persons: {{ course.people }}</p>
+              <p>
+                <i class="fa fa-map-marker"></i> Location: {{ course.location }}
+              </p>
             </div>
             <p class="card-text">
               {{ course.information | wordCut: 50 }}
