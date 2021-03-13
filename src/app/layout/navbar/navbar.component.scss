@@ -10,17 +10,18 @@
   }
 
   & .img-fluid {
-    height: 60px;
-    margin-right: 30px;
+    height: 6rem;
+    margin-right: 3rem;
   }
 }
 
 .nav-item {
-  margin: 0 15px;
+  margin: 0 1.5rem;
 }
 
 .nav-link {
   color: $color-white;
+  font-size: 1.6rem;
 
   &:hover {
     text-decoration: underline;
@@ -35,6 +36,7 @@
 
 .fa {
   color: $color-white;
+  font-size: 5rem;
 }
 
 @media only screen and (max-width: 990px) {

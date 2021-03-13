@@ -6,16 +6,20 @@ section {
 }
 
 .testimonial {
-  height: 500px;
+  height: 50rem;
 }
 
 .testimonial-box {
   border: 2px solid $color-blue;
-  padding: 100px;
+  padding: 10rem;
+}
+
+.blockquote-footer {
+  font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 768px) {
   .testimonial-box {
-    padding: 50px;
+    padding: 5rem;
   }
 }
