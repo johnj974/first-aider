@@ -18,6 +18,12 @@
   border: 2px solid $color-blue;
   background-color: $color-paleBlue;
 
+  &-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+
   &-text {
     margin: 8px;
   }

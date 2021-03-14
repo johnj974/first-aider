@@ -10,11 +10,18 @@ section {
 }
 
 img {
-  width: 100%;
+  width: 70%;
 }
 
 @media only screen and (max-width: 600px) {
   .button-container {
     text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  img {
+    width: 100%;
   }
 }
