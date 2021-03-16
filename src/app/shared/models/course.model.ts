@@ -4,6 +4,7 @@ export class Coursemodel {
   public date: Date;
   public time: string;
   public people: string;
+  public duration: string;
   public location: string;
   public information: string;
 
@@ -13,6 +14,7 @@ export class Coursemodel {
     date: Date,
     time: string,
     people: string,
+    duration: string,
     location: string,
     information: string
   ) {
@@ -21,6 +23,7 @@ export class Coursemodel {
     this.date = date;
     this.time = time;
     this.people = people;
+    this.duration = duration;
     this.location = location;
     this.information = information;
   }

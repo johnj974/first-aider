@@ -11,18 +11,21 @@
             <div class="card-info">
               <p>
                 <i class="fa fa-calendar"></i> Date:
-                {{ displayCourse.date | date: "fullDate" }}
+                {{ displayCourse.date | date: "fullDate" }}.
               </p>
               <p>
-                <i class="fa fa-clock-o"></i> Time:
-                {{ displayCourse.time }}
+                <i class="fa fa-clock-o"></i> Time: {{ displayCourse.time }}.
               </p>
               <p>
-                <i class="fa fa-user"></i> Persons: {{ displayCourse.people }}
+                <i class="fa fa-hourglass-o"></i> Duration:
+                {{ displayCourse.duration }}.
+              </p>
+              <p>
+                <i class="fa fa-user"></i> Persons: {{ displayCourse.people }}.
               </p>
               <p>
                 <i class="fa fa-map-marker"></i> Location:
-                {{ displayCourse.location }}
+                {{ displayCourse.location }}.
               </p>
             </div>
             <p class="card-text">
