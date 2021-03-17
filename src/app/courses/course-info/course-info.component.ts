@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Coursemodel } from 'src/app/shared/models/course.model';
 import { CoursesService } from 'src/app/shared/services/courses.service';
 
@@ -11,7 +11,8 @@ import { CoursesService } from 'src/app/shared/services/courses.service';
 export class CourseInfoComponent implements OnInit {
   constructor(
     private coursesService: CoursesService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   courseId = this.route.snapshot.params['id'];
@@ -21,4 +22,8 @@ export class CourseInfoComponent implements OnInit {
   );
 
   ngOnInit(): void {}
+
+  onNavigate() {
+    this.router.navigate(['booking'], { relativeTo: this.route });
+  }
 }

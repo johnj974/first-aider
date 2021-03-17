@@ -6,9 +6,10 @@ import { MainCourseComponent } from './main-course/main-course.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseInfoComponent } from './course-info/course-info.component';
 import { SharedModule } from '../shared/shared.module';
+import { CourseBookComponent } from './course-book/course-book.component';
 
 @NgModule({
-  declarations: [MainCourseComponent, CourseCardComponent, CourseInfoComponent],
+  declarations: [MainCourseComponent, CourseCardComponent, CourseInfoComponent, CourseBookComponent],
   imports: [CommonModule, CoursesRoutingModule, SharedModule],
 })
 export class CoursesModule {}
