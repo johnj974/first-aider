@@ -7,6 +7,7 @@ export class Coursemodel {
   public duration: string;
   public location: string;
   public information: string;
+  public price: string;
 
   constructor(
     image: string,
@@ -16,7 +17,8 @@ export class Coursemodel {
     people: string,
     duration: string,
     location: string,
-    information: string
+    information: string,
+    price: string
   ) {
     this.image = image;
     this.title = title;
@@ -26,5 +28,6 @@ export class Coursemodel {
     this.duration = duration;
     this.location = location;
     this.information = information;
+    this.price = price;
   }
 }

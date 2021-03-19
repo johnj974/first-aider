@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-faq-contact',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./faq-contact.component.scss'],
 })
 export class FaqContactComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  onToContact() {}
+  onToContact() {
+    this.router.navigate(['/contact']);
+  }
 }
