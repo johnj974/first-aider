@@ -1,10 +1,18 @@
 @import "../../../styles/styles.scss";
 
 .faq-questions {
-  height: 40rem;
+  height: 35rem;
   text-align: center;
   color: $color-blue;
   &_text {
     padding: 10rem 1rem;
   }
+}
+
+.question-image {
+  height: 100px;
+}
+
+img {
+  width: 15rem;
 }

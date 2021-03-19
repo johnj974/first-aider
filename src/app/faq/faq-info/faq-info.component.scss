@@ -1,0 +1,10 @@
+@import "../../../styles/styles.scss";
+
+.faq-info {
+  height: 50rem;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-blue,
+    $color-active
+  );
+}
