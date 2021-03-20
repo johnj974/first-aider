@@ -11,6 +11,11 @@
 
 .question-image {
   height: 100px;
+
+  p {
+    color: $color-active;
+    font-weight: 600;
+  }
 }
 
 img {

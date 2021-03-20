@@ -1,4 +1,4 @@
-<section>
+<section class="py-5">
   <div class="container py-5">
     <div class="row">
       <div class="col-md-8">
@@ -24,11 +24,20 @@
           <div class="form-group mb-3">
             <label for="people">People</label>
             <input
-              type="text"
+              type="number"
               id="people"
               class="form-control"
               formControlName="people"
             />
+            <div
+              class="form-text small"
+              *ngIf="
+                !bookingForm.get('people').valid &&
+                bookingForm.get('people').touched
+              "
+            >
+              Please enter a valid quantity.
+            </div>
           </div>
           <div class="form-group mb-3">
             <label for="cost">Cost</label>
@@ -39,37 +48,68 @@
               formControlName="cost"
             />
           </div>
-          <div class="form-group mb-3">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              class="form-control"
-              formControlName="name"
-            />
+          <div formGroupName="userData">
+            <div class="form-group mb-3">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                formControlName="name"
+              />
+              <div
+                class="form-text small"
+                *ngIf="
+                  !bookingForm.get('userData.name').valid &&
+                  bookingForm.get('userData.name').touched
+                "
+              >
+                Please enter a valid name.
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                formControlName="email"
+              />
+              <div
+                class="form-text small"
+                *ngIf="
+                  !bookingForm.get('userData.email').valid &&
+                  bookingForm.get('userData.email').touched
+                "
+              >
+                Please enter a valid email.
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="phone">Phone</label>
+              <input
+                type="text"
+                id="phone"
+                class="form-control"
+                formControlName="phone"
+              />
+              <div
+                class="form-text small"
+                *ngIf="
+                  !bookingForm.get('userData.phone').valid &&
+                  bookingForm.get('userData.phone').touched
+                "
+              >
+                Please enter a valid phone number.
+              </div>
+            </div>
           </div>
-          <div class="form-group mb-3">
-            <label for="email">email</label>
-            <input
-              type="email"
-              id="email"
-              class="form-control"
-              formControlName="email"
-            />
+          <div class="button-container">
+            <button class="btn btn-blue" type="submit">Book Course</button>
           </div>
-          <div class="form-group mb-3">
-            <label for="phone">phone</label>
-            <input
-              type="text"
-              id="phone"
-              class="form-control"
-              formControlName="phone"
-            />
-          </div>
-          <button class="btn btn-blue" type="submit">Book Course</button>
         </form>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 testimonial-column">
         <h3 class="mb-4">First Aider Customer Testimonials</h3>
         <p class="mb-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.

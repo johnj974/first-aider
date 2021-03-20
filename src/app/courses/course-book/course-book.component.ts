@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TestimonialModel } from 'src/app/shared/models/testimonial.model';
 import { TestimonialService } from 'src/app/shared/services/testimonial.service';
 
@@ -21,11 +21,13 @@ export class CourseBookComponent implements OnInit {
     this.bookingForm = new FormGroup({
       course: new FormControl(null),
       location: new FormControl(null),
-      people: new FormControl(null),
+      people: new FormControl(null, Validators.required),
       cost: new FormControl(null),
-      name: new FormControl(null),
-      email: new FormControl(null),
-      phone: new FormControl(null),
+      userData: new FormGroup({
+        name: new FormControl(null, Validators.required),
+        email: new FormControl(null, [Validators.required, Validators.email]),
+        phone: new FormControl(null, Validators.required),
+      }),
     });
   }
 

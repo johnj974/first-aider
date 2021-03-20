@@ -25,5 +25,12 @@ export class TestimonialService {
       'Teacher',
       'Bouleensheere N.S'
     ),
+    new TestimonialModel(
+      'Paediatric Care ',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quae nulla quasi! Non optio qui eaque quis tempore ea magnam beatae, quod officiis quos ipsa natus ',
+      'Denis Nielsen',
+      'Teacher',
+      'Bouleensheere N.S'
+    ),
   ];
 }
