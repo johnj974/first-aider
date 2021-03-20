@@ -7,9 +7,20 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseInfoComponent } from './course-info/course-info.component';
 import { SharedModule } from '../shared/shared.module';
 import { CourseBookComponent } from './course-book/course-book.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [MainCourseComponent, CourseCardComponent, CourseInfoComponent, CourseBookComponent],
-  imports: [CommonModule, CoursesRoutingModule, SharedModule],
+  declarations: [
+    MainCourseComponent,
+    CourseCardComponent,
+    CourseInfoComponent,
+    CourseBookComponent,
+  ],
+  imports: [
+    CommonModule,
+    CoursesRoutingModule,
+    SharedModule,
+    ReactiveFormsModule,
+  ],
 })
 export class CoursesModule {}

@@ -1,7 +1,74 @@
 <section>
   <div class="container py-5">
     <div class="row">
-      <div class="col-md-8">booking form here</div>
+      <div class="col-md-8">
+        <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+          <div class="form-group mb-3">
+            <label for="course">Course</label>
+            <input
+              type="text"
+              id="course"
+              class="form-control"
+              formControlName="course"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              id="location"
+              class="form-control"
+              formControlName="location"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="people">People</label>
+            <input
+              type="text"
+              id="people"
+              class="form-control"
+              formControlName="people"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="cost">Cost</label>
+            <input
+              type="text"
+              id="cost"
+              class="form-control"
+              formControlName="cost"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              formControlName="name"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="email">email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              formControlName="email"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="phone">phone</label>
+            <input
+              type="text"
+              id="phone"
+              class="form-control"
+              formControlName="phone"
+            />
+          </div>
+          <button class="btn btn-blue" type="submit">Book Course</button>
+        </form>
+      </div>
       <div class="col-md-4">
         <h3 class="mb-4">First Aider Customer Testimonials</h3>
         <p class="mb-0">
