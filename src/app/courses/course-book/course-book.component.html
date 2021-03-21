@@ -10,6 +10,7 @@
               id="course"
               class="form-control"
               formControlName="course"
+              placeholder="{{ courseBookingInfo.title }}"
             />
           </div>
           <div class="form-group mb-3">
@@ -19,21 +20,23 @@
               id="location"
               class="form-control"
               formControlName="location"
+              placeholder="{{ courseBookingInfo.location }}"
             />
           </div>
           <div class="form-group mb-3">
-            <label for="people">People</label>
+            <label for="people">Date</label>
             <input
-              type="number"
-              id="people"
+              type="string"
+              id="date"
               class="form-control"
-              formControlName="people"
+              formControlName="date"
+              placeholder="{{ courseBookingInfo.date | date: 'fullDate' }}"
             />
             <div
               class="form-text small"
               *ngIf="
-                !bookingForm.get('people').valid &&
-                bookingForm.get('people').touched
+                !bookingForm.get('date').valid &&
+                bookingForm.get('date').touched
               "
             >
               Please enter a valid quantity.
@@ -46,6 +49,7 @@
               id="cost"
               class="form-control"
               formControlName="cost"
+              placeholder="{{ courseBookingInfo.price }}"
             />
           </div>
           <div formGroupName="userData">
