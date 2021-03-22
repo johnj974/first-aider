@@ -24,6 +24,7 @@ export class CourseBookComponent implements OnInit {
     month: 'long',
     day: 'numeric',
   };
+  formSubmitted = false;
 
   constructor(
     private testimonialService: TestimonialService,
@@ -66,7 +67,7 @@ export class CourseBookComponent implements OnInit {
   }
 
   onSubmit() {
-    
+    this.formSubmitted = true;
     console.log(this.bookingForm);
   }
 }

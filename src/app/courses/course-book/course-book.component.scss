@@ -20,3 +20,13 @@ input.ng-invalid.ng-touched {
     text-align: center;
   }
 }
+
+.testimonial-column {
+  color: $color-white;
+  background-image: linear-gradient(to top right, $color-active, $color-blue);
+}
+
+.blockquote-footer {
+  color: $color-white;
+  font-size: 1rem;
+}

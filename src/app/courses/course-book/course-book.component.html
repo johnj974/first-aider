@@ -60,6 +60,7 @@
                 id="name"
                 class="form-control"
                 formControlName="name"
+                #name
               />
               <div
                 class="form-text small"
@@ -109,9 +110,23 @@
             </div>
           </div>
           <div class="button-container">
-            <button class="btn btn-blue" type="submit">Book Course</button>
+            <button
+              class="btn btn-blue"
+              type="submit"
+              [disabled]="!bookingForm.valid"
+            >
+              Book Course
+            </button>
           </div>
         </form>
+        <hr />
+        <p *ngIf="formSubmitted; else submitMessage">
+          Thank You {{ name.value | titlecase }} for booking
+          {{ courseBookingInfo.title }} we look forward to meeting you.
+        </p>
+        <ng-template #submitMessage>
+          <p>Please fill in all form inputs to submit booking form</p>
+        </ng-template>
       </div>
       <div class="col-md-4 testimonial-column">
         <h3 class="mb-4">First Aider Customer Testimonials</h3>
