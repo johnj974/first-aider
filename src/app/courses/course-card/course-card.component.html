@@ -34,6 +34,13 @@
             <p class="card-text">
               {{ course.information | wordCut: 50 }}
             </p>
+            <p class="info-text">
+              &#10149;<a
+                (click)="onShowCourse(i, course.title)"
+                style="cursor: pointer"
+                >More Info</a
+              >
+            </p>
           </div>
         </div>
       </div>

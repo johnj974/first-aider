@@ -12,6 +12,15 @@
 
 h4 {
   color: $color-altOrange;
+  // transition: all 0.5s;
+
+  // &:hover {
+  //   color: $color-white;
+  // }
+}
+
+.info-text {
+  color: $color-altOrange;
   transition: all 0.5s;
 
   &:hover {
