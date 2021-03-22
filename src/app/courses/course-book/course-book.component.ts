@@ -18,6 +18,12 @@ export class CourseBookComponent implements OnInit {
   courseId: string;
   courseBookingInfo: Coursemodel;
   test: string = 'hell';
+  options: {} = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
 
   constructor(
     private testimonialService: TestimonialService,
@@ -27,6 +33,14 @@ export class CourseBookComponent implements OnInit {
 
   ngOnInit(): void {
     this.testimonialArray = this.testimonialService.testimonialServiceArray;
+
+    this.route.params.subscribe((params: Params) => {
+      this.courseId = params.id;
+      this.courseBookingInfo = this.courseService.onCourseDisplay(
+        this.courseId
+      );
+      console.log(this.courseBookingInfo);
+    });
 
     this.bookingForm = new FormGroup({
       course: new FormControl(null),
@@ -40,16 +54,27 @@ export class CourseBookComponent implements OnInit {
       }),
     });
 
-    this.route.params.subscribe((params: Params) => {
-      this.courseId = params.id;
-      this.courseBookingInfo = this.courseService.onCourseDisplay(
-        this.courseId
-      );
-      console.log(this.courseBookingInfo);
+    // this.bookingForm.controls['course'].disable();
+    // this.bookingForm.controls['location'].disable();
+    // this.bookingForm.controls['date'].disable();
+    // this.bookingForm.controls['cost'].disable();
+
+    this.bookingForm.patchValue({
+      course: this.courseBookingInfo.title,
+      location: this.courseBookingInfo.location,
+      date: this.courseBookingInfo.date.toLocaleDateString(
+        'en-US',
+        this.options
+      ),
+      cost: this.courseBookingInfo.price,
     });
   }
 
   onSubmit() {
+    // this.bookingForm.controls['course'].enable();
+    // this.bookingForm.controls['location'].enable();
+    // this.bookingForm.controls['date'].enable();
+    // this.bookingForm.controls['cost'].enable();
     console.log(this.bookingForm);
   }
 }

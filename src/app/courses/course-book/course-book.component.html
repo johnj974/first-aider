@@ -10,7 +10,7 @@
               id="course"
               class="form-control"
               formControlName="course"
-              placeholder="{{ courseBookingInfo.title }}"
+              [readonly]="true"
             />
           </div>
           <div class="form-group mb-3">
@@ -20,7 +20,7 @@
               id="location"
               class="form-control"
               formControlName="location"
-              placeholder="{{ courseBookingInfo.location }}"
+              [readonly]="true"
             />
           </div>
           <div class="form-group mb-3">
@@ -30,7 +30,7 @@
               id="date"
               class="form-control"
               formControlName="date"
-              placeholder="{{ courseBookingInfo.date | date: 'fullDate' }}"
+              [readonly]="true"
             />
             <div
               class="form-text small"
@@ -49,7 +49,7 @@
               id="cost"
               class="form-control"
               formControlName="cost"
-              placeholder="{{ courseBookingInfo.price }}"
+              [readonly]="true"
             />
           </div>
           <div formGroupName="userData">
