@@ -4,8 +4,10 @@
 @import "../../../styles/styles.scss";
 
 .card {
-  border: 2px solid $color-blue;
-  background-color: $color-paleBlue;
+  //border: 2px solid $color-active;
+  //background-color: $color-active;
+  background-image: linear-gradient(to top right, $color-active, $color-blue);
+  color: $color-white;
 }
 
 h4 {
@@ -13,7 +15,7 @@ h4 {
   transition: all 0.5s;
 
   &:hover {
-    color: $color-active;
+    color: $color-white;
   }
 }
 

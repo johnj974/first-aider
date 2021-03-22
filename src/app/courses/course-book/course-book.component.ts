@@ -54,11 +54,6 @@ export class CourseBookComponent implements OnInit {
       }),
     });
 
-    // this.bookingForm.controls['course'].disable();
-    // this.bookingForm.controls['location'].disable();
-    // this.bookingForm.controls['date'].disable();
-    // this.bookingForm.controls['cost'].disable();
-
     this.bookingForm.patchValue({
       course: this.courseBookingInfo.title,
       location: this.courseBookingInfo.location,
@@ -71,10 +66,7 @@ export class CourseBookComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.bookingForm.controls['course'].enable();
-    // this.bookingForm.controls['location'].enable();
-    // this.bookingForm.controls['date'].enable();
-    // this.bookingForm.controls['cost'].enable();
+    
     console.log(this.bookingForm);
   }
 }

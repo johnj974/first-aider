@@ -10,8 +10,11 @@ section {
 }
 
 .testimonial-box {
-  border: 2px solid $color-blue;
+  //border: 2px solid $color-blue;
   padding: 10rem;
+  color: $color-white;
+
+  background-image: linear-gradient(to right, $color-active, $color-blue);
 }
 
 .blockquote-footer {
