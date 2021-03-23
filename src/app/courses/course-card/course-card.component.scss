@@ -8,6 +8,10 @@
   //background-color: $color-active;
   background-image: linear-gradient(to top right, $color-active, $color-blue);
   color: $color-white;
+
+  i.fa {
+    color: $color-altOrange;
+  }
 }
 
 h4 {

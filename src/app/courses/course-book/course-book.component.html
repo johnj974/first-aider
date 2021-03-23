@@ -122,7 +122,7 @@
         <hr />
         <p *ngIf="formSubmitted; else submitMessage">
           Thank You {{ name.value | titlecase }} for booking
-          {{ courseBookingInfo.title }} we look forward to meeting you.
+          {{ courseBookingInfo.title }}, we look forward to meeting you.
         </p>
         <ng-template #submitMessage>
           <p>Please fill in all form inputs to submit booking form</p>
