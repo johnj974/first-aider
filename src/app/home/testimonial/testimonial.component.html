@@ -1,31 +1,8 @@
 <section>
   <div class="container testimonial py-5">
     <div class="row">
-      <div class="col-md-6">
-        <h3 class="mb-4">First Aider Customer Testimonials</h3>
-        <p class="mb-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <footer class="blockquote-footer mb-4">
-          Sean Burke
-          <cite title="Source Title">Care Assistant</cite>
-        </footer>
-        <div *ngFor="let quote of testimonialArray">
-          <p class="mb-0">
-            {{ quote.statement | reduceText }}
-          </p>
-          <footer class="blockquote-footer mb-4">
-            {{ quote.person }}
-            <cite title="Source Title">{{ quote.position }}</cite>
-          </footer>
-        </div>
-      </div>
       <div class="col-md-6 d-none d-md-block">
-        <div
-          id="carouselExampleSlidesOnly"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active testimonial-box">
               <div class="testimonial-text">
@@ -61,6 +38,25 @@
             <div class="carousel-item"></div>
             <!---TEMPORARY FIX FOR CAROUSEL JUMPING-->
           </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3 class="mb-4">First Aider Customer Testimonials</h3>
+        <p class="mb-0">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <footer class="blockquote-footer mb-4">
+          Sean Burke
+          <cite title="Source Title">Care Assistant</cite>
+        </footer>
+        <div *ngFor="let quote of testimonialArray">
+          <p class="mb-0">
+            {{ quote.statement | reduceText }}
+          </p>
+          <footer class="blockquote-footer mb-4">
+            {{ quote.person }}
+            <cite title="Source Title">{{ quote.position }}</cite>
+          </footer>
         </div>
       </div>
     </div>

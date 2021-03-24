@@ -1,0 +1,24 @@
+@import "../../../styles/styles.scss";
+.card {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: none;
+  border: none;
+  border: 2px solid $color-blue;
+  background-color: $color-paleBlue;
+  //color: $color-white;
+
+  &-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+
+  &-text {
+    margin: 8px;
+  }
+
+  i.fa {
+    color: $color-altOrange;
+  }
+}

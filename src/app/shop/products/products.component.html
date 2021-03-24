@@ -1,0 +1,31 @@
+<section>
+  <div class="container shop">
+    <div class="row">
+      <div
+        class="col-lg-4 mt-4"
+        *ngFor="let product of productArray; let i = index"
+      >
+        <div class="card" *ngIf="i < 3">
+          <img
+            src="{{ product.image }}"
+            class="card-img-top"
+            alt="{{ product.title }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title mx-2">{{ product.title }}</h5>
+            <p class="card-text">
+              {{ product.description | wordCut }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="btn btn-blue my-5" (click)="onToShop()">
+          More First Aid Products
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
