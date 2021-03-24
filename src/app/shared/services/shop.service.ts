@@ -9,7 +9,7 @@ export class ShopService {
   shopServiceArray: ProductModel[] = [
     new ProductModel(
       'C1 Defibrillator',
-      'i am an image',
+      'assets/images/defib.png',
       'this is a defib',
       '€700'
     ),
@@ -19,6 +19,31 @@ export class ShopService {
       'this is a pocket mask',
       '€5'
     ),
+    new ProductModel(
+      'First Aid Kits',
+      'assets/images/med-kit.jpg',
+      'this is a face mask',
+      '€3'
+    ),
+    new ProductModel(
+      'Face Mask',
+      'assets/images/masks.png',
+      'this is a face mask',
+      '€3'
+    ),
+    new ProductModel(
+      'Surgical Gloves',
+      'assets/images/gloves.jpg',
+      'this is a face mask',
+      '€3'
+    ),
+    new ProductModel(
+      'First Aid Signs',
+      'assets/images/sign.png',
+      'this is a face mask',
+      '€3'
+    ),
+    new ProductModel('Face Mask', 'i am an image', 'this is a face mask', '€3'),
     new ProductModel('Face Mask', 'i am an image', 'this is a face mask', '€3'),
   ];
 }
