@@ -7,3 +7,9 @@ section {
 .shop {
   color: $color-white;
 }
+
+@media only screen and (max-width: 768px) {
+  .firstShopParagraph {
+    display: none;
+  }
+}
