@@ -27,7 +27,10 @@
                 <i class="fa fa-map-marker"></i> Location:
                 {{ displayCourse.location }}.
               </p>
-              <p>&#164; Price: {{ displayCourse.price }}.</p>
+              <p>
+                <i class="fa fa-credit-card"></i> Price:
+                {{ displayCourse.price }}.
+              </p>
             </div>
             <p class="card-text">
               {{ displayCourse.information | wordCut: 70 }}
@@ -36,12 +39,8 @@
               {{ displayCourse.information }}
             </p>
             <div class="text-center">
-              <button
-                class="btn btn-blue my-5"
-                type="button"
-                (click)="onNavigate()"
-              >
-                Book Course
+              <button class="btn my-5" type="button" (click)="onNavigate()">
+                &#10149; Book Course
               </button>
             </div>
           </div>

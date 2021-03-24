@@ -1,8 +1,14 @@
 @import "../../../styles/styles.scss";
 
 .card {
-  border: 2px solid $color-blue;
-  background-color: $color-paleBlue;
+  //border: 2px solid $color-blue;
+  //background-color: $color-paleBlue;
+  background-image: linear-gradient(to top right, $color-active, $color-blue);
+  color: $color-white;
+}
+
+i.fa {
+  color: $color-altOrange;
 }
 
 .card-title {
@@ -11,4 +17,12 @@
 
 .btn {
   width: 60%;
+  font-size: 2rem;
+  color: $color-altOrange;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.btn:hover {
+  color: $color-white;
 }
