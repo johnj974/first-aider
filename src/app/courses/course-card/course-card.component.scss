@@ -1,11 +1,6 @@
-// .card {
-//   border: 2px solid $color-blue;
-// }
-@import "../../../styles/styles.scss";
+@import "../../../styles/helpers/variables";
 
 .card {
-  //border: 2px solid $color-active;
-  //background-color: $color-active;
   background-image: linear-gradient(to top right, $color-active, $color-blue);
   color: $color-white;
 
@@ -16,11 +11,6 @@
 
 h4 {
   color: $color-white;
-  // transition: all 0.5s;
-
-  // &:hover {
-  //   color: $color-white;
-  // }
 }
 
 .info-text {
@@ -31,12 +21,3 @@ h4 {
     color: $color-white;
   }
 }
-
-// @keyframes highLighter {
-//   from {
-//     color: $color-blue;
-//   }
-//   to {
-//     color: $color-active;
-//   }
-// }
