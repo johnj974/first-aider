@@ -1,6 +1,14 @@
 <section class="products">
   <div class="container shop">
     <div class="row">
+      <div class="col">
+        <p>
+          <i class="fa fa-shopping-cart fa-2x"></i>
+          <span *ngIf="cartArray.length > 0"> x {{ cartArray.length }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
       <div
         class="col-lg-3 col-md-4 mt-4"
         *ngFor="let product of productArray; let i = index"
@@ -19,16 +27,21 @@
             <p class="card-text">
               {{ product.cost }}
             </p>
+            <p class="cart-text">
+              &#10149;<a (click)="onAddToCart(i)" style="cursor: pointer"
+                >Add To Cart</a
+              >
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col text-center">
         <button class="btn btn-blue my-5" (click)="onToShop()">
           More First Aid Products
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>

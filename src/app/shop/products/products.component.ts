@@ -11,15 +11,22 @@ import { ShopService } from 'src/app/shared/services/shop.service';
 export class ProductsComponent implements OnInit {
   //.
   productArray: ProductModel[] = [];
+  cartArray: ProductModel[] = [];
 
   constructor(private shopService: ShopService, private router: Router) {}
 
   ngOnInit(): void {
     this.productArray = this.shopService.shopServiceArray;
+
     console.log(this.productArray);
   }
 
   onToShop() {
     this.router.navigate(['/shop']);
+  }
+
+  onAddToCart(index: number) {
+    this.cartArray.push(this.productArray[index]);
+    console.log(this.cartArray);
   }
 }

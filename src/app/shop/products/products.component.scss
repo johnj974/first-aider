@@ -22,4 +22,16 @@
   i.fa {
     color: $color-altOrange;
   }
+
+  .cart-text {
+    color: $color-altOrange;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $color-active;
+    }
+  }
+}
+i.fa {
+  color: $color-altOrange;
 }
