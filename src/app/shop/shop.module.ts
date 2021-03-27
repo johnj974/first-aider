@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ShopRoutingModule } from './shop-routing.module';
 import { MainShopComponent } from './main-shop/main-shop.component';
@@ -9,6 +10,6 @@ import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [MainShopComponent, ProductsComponent, CheckoutComponent],
-  imports: [CommonModule, ShopRoutingModule, SharedModule],
+  imports: [CommonModule, ShopRoutingModule, SharedModule, ReactiveFormsModule],
 })
 export class ShopModule {}

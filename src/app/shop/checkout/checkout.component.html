@@ -1,7 +1,106 @@
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="col"><p>Checkout here</p></div>
+  <div class="container py-5">
+    <div class="row py-5">
+      <div class="col-lg-7">
+        <form
+          [formGroup]="checkOutForm"
+          (ngSubmit)="onCheckOut()"
+          autocomplete="off"
+        >
+          <div class="mb-3">
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Full Name"
+              formControlName="name"
+            />
+            <label for="name" class="form-label">Full Name</label>
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="E-mail"
+              formControlName="email"
+            />
+            <label for="email" class="form-label">E-mail</label>
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              id="phone"
+              class="form-control"
+              placeholder="Phone Number"
+              formControlName="phone"
+            />
+            <label for="phone" class="form-label">Phone Number</label>
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              id="addressOne"
+              class="form-control"
+              placeholder="Address Line 1"
+              formControlName="addressOne"
+            />
+            <label for="addressOne" class="form-label">Address Line 1</label>
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              id="addressTwo"
+              class="form-control"
+              placeholder="Address Line 2"
+              formControlName="addressTwo"
+            />
+            <label for="addressTwo" class="form-label">Address Line 2</label>
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              id="area-code"
+              class="form-control"
+              placeholder="Area Code"
+              formControlName="areaCode"
+            />
+            <label for="area-code" class="form-label">Area Code</label>
+          </div>
+          <button class="btn btn-blue" type="submit">Place Order</button>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>

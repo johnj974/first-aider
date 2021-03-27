@@ -1,0 +1,27 @@
+@import "../../../styles/helpers/variables";
+@import "../../../styles/components/buttons";
+
+.table {
+  font-size: 1.5rem;
+}
+
+form {
+  padding: 0rem 2rem;
+
+  label {
+    color: $color-active;
+    padding-left: 0.9rem;
+    font-size: 1.3rem;
+    transition: all 0.3s;
+  }
+
+  input {
+    font-size: 1.5rem;
+  }
+}
+
+input:placeholder-shown ~ label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
