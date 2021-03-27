@@ -120,9 +120,12 @@
           >
             Place Order
           </button>
-          <span *ngIf="orderPlaced">
+          <span *ngIf="orderPlaced; else instruction">
             Thank You {{ name.value | titlecase }} for your order
           </span>
+          <ng-template #instruction>
+            <span> You must have items in the cart to place an order </span>
+          </ng-template>
         </form>
       </div>
       <div class="col-lg-5">
@@ -139,7 +142,14 @@
             <tr>
               <th scope="row">{{ i + 1 }}</th>
               <td>{{ product.title }}</td>
-              <td>{{ product.cost }}</td>
+              <td>€{{ product.cost }}</td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="checkoutCart.length > 0">
+            <tr>
+              <th>Total</th>
+              <td></td>
+              <td>€{{ orderTotal }}</td>
             </tr>
           </tbody>
         </table>

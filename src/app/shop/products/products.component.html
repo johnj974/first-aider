@@ -27,9 +27,7 @@
             <p class="card-text">
               {{ product.description | wordCut }}
             </p>
-            <p class="card-text">
-              {{ product.cost }}
-            </p>
+            <p class="card-text">€ {{ product.cost }}</p>
             <p class="cart-text">
               &#10149;<a (click)="onAddToCart(i)" style="cursor: pointer"
                 >Add To Cart</a
