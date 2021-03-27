@@ -1,9 +1,24 @@
 @import "../../../styles/helpers/variables";
 @import "../../../styles/components/buttons";
 
-label,
+form {
+  padding: 0rem 2rem;
+}
+
+.form-control:disabled {
+  background-color: red;
+}
+
+label {
+  font-size: 1.4rem;
+}
 input {
-  font-size: 1.6rem;
+  border: transparent;
+  border-left: 1px solid $color-blue;
+  border-bottom: 1px solid $color-blue;
+  background-color: $color-paleBlue;
+  border-radius: 0;
+  font-size: 1.5rem;
 }
 
 .small {
@@ -19,6 +34,9 @@ input.ng-invalid.ng-touched {
 @media only screen and (max-width: 600px) {
   .button-container {
     text-align: center;
+  }
+  form {
+    padding: 0;
   }
 }
 

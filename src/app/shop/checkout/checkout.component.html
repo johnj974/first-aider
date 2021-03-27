@@ -14,7 +14,17 @@
               class="form-control"
               placeholder="Full Name"
               formControlName="name"
+              #name
             />
+            <div
+              class="form-text small"
+              *ngIf="
+                !checkOutForm.get('name').valid &&
+                checkOutForm.get('name').touched
+              "
+            >
+              Please enter a valid name.
+            </div>
             <label for="name" class="form-label">Full Name</label>
           </div>
           <div class="mb-3">
@@ -25,6 +35,15 @@
               placeholder="E-mail"
               formControlName="email"
             />
+            <div
+              class="form-text small"
+              *ngIf="
+                !checkOutForm.get('email').valid &&
+                checkOutForm.get('email').touched
+              "
+            >
+              Please enter a valid email.
+            </div>
             <label for="email" class="form-label">E-mail</label>
           </div>
           <div class="mb-3">
@@ -35,6 +54,15 @@
               placeholder="Phone Number"
               formControlName="phone"
             />
+            <div
+              class="form-text small"
+              *ngIf="
+                !checkOutForm.get('phone').valid &&
+                checkOutForm.get('phone').touched
+              "
+            >
+              Please enter a phone number.
+            </div>
             <label for="phone" class="form-label">Phone Number</label>
           </div>
           <div class="mb-3">
@@ -45,6 +73,15 @@
               placeholder="Address Line 1"
               formControlName="addressOne"
             />
+            <div
+              class="form-text small"
+              *ngIf="
+                !checkOutForm.get('addressOne').valid &&
+                checkOutForm.get('addressOne').touched
+              "
+            >
+              Please enter a address.
+            </div>
             <label for="addressOne" class="form-label">Address Line 1</label>
           </div>
           <div class="mb-3">
@@ -55,6 +92,15 @@
               placeholder="Address Line 2"
               formControlName="addressTwo"
             />
+            <div
+              class="form-text small"
+              *ngIf="
+                !checkOutForm.get('addressTwo').valid &&
+                checkOutForm.get('addressTwo').touched
+              "
+            >
+              Please enter a address.
+            </div>
             <label for="addressTwo" class="form-label">Address Line 2</label>
           </div>
           <div class="mb-3">
@@ -67,7 +113,16 @@
             />
             <label for="area-code" class="form-label">Area Code</label>
           </div>
-          <button class="btn btn-blue" type="submit">Place Order</button>
+          <button
+            class="btn btn-blue"
+            type="submit"
+            [disabled]="!checkOutForm.valid || checkoutCart.length === 0"
+          >
+            Place Order
+          </button>
+          <span *ngIf="orderPlaced">
+            Thank You {{ name.value | titlecase }} for your order
+          </span>
         </form>
       </div>
       <div class="col-lg-5">
@@ -80,26 +135,15 @@
               <th scope="col">Handle</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngFor="let product of checkoutCart; let i = index">
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ product.title }}</td>
+              <td>{{ product.cost }}</td>
             </tr>
           </tbody>
         </table>
+        <hr />
       </div>
     </div>
   </div>

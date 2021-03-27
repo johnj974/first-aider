@@ -16,6 +16,11 @@ form {
   }
 
   input {
+    border: transparent;
+    border-left: 1px solid $color-blue;
+    border-bottom: 1px solid $color-blue;
+    background-color: $color-paleBlue;
+    border-radius: 0;
     font-size: 1.5rem;
   }
 }
@@ -24,4 +29,18 @@ input:placeholder-shown ~ label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+}
+
+span {
+  font-size: 1.6rem;
+}
+
+.small {
+  color: $color-crimson;
+  font-size: 1.2rem;
+}
+
+input.ng-invalid.ng-touched {
+  border-left: 1px solid $color-crimson;
+  border-bottom: 1px solid $color-crimson;
 }
