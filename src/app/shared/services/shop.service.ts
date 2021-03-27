@@ -46,4 +46,10 @@ export class ShopService {
     new ProductModel('Face Mask', 'i am an image', 'this is a face mask', '€3'),
     new ProductModel('Face Mask', 'i am an image', 'this is a face mask', '€3'),
   ];
+
+  serviceCart: ProductModel[] = [];
+
+  addToServiceCart(index: number) {
+    this.serviceCart.push(this.shopServiceArray[index]);
+  }
 }

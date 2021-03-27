@@ -29,6 +29,7 @@ export class ProductsComponent implements OnInit {
 
   onAddToCart(index: number) {
     this.cartArray.push(this.productArray[index]);
+    this.shopService.addToServiceCart(index);
     console.log(this.cartArray);
   }
 
