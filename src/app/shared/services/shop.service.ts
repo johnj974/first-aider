@@ -37,19 +37,19 @@ export class ShopService {
       'Surgical Gloves',
       'assets/images/gloves.jpg',
       'this is a face mask',
-      3
+      10
     ),
     new ProductModel(
       'First Aid Signs',
       'assets/images/sign.png',
       'this is a face mask',
-      3
+      5
     ),
     new ProductModel(
       'EpiPen',
       'assets/images/epi-pen.jpg',
       'this is a face mask',
-      3
+      30
     ),
     new ProductModel(
       'Bandages+Slings',

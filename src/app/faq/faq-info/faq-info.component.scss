@@ -1,10 +1,15 @@
 @import "../../../styles/helpers/variables";
 
 .faq-info {
-  height: 50rem;
   background-image: linear-gradient(
     to bottom right,
     $color-blue,
     $color-active
   );
+
+  color: $color-white;
+}
+
+li {
+  font-size: 1.6rem;
 }
