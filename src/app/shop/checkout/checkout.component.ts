@@ -35,5 +35,10 @@ export class CheckoutComponent implements OnInit {
   onCheckOut() {
     console.log(this.checkOutForm);
     this.orderPlaced = true;
+    setTimeout(() => {
+      this.checkOutForm.reset();
+      this.orderPlaced = false;
+      this.checkoutCart = [];
+    }, 5000);
   }
 }

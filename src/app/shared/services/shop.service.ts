@@ -11,13 +11,13 @@ export class ShopService {
   shopServiceArray: ProductModel[] = [
     new ProductModel(
       'C1 Defibrillator',
-      'assets/images/defib.png',
+      'assets/images/defibrillator.jfif',
       'this is a defib',
       700
     ),
     new ProductModel(
       'Pocket Mask',
-      'i am an image',
+      'assets/images/pocket-mask.jpg',
       'this is a pocket mask',
       5
     ),
@@ -45,8 +45,18 @@ export class ShopService {
       'this is a face mask',
       3
     ),
-    new ProductModel('Face Mask', 'i am an image', 'this is a face mask', 3),
-    new ProductModel('Face Mask', 'i am an image', 'this is a face mask', 3),
+    new ProductModel(
+      'EpiPen',
+      'assets/images/epi-pen.jpg',
+      'this is a face mask',
+      3
+    ),
+    new ProductModel(
+      'Bandages+Slings',
+      'assets/images/bandages.jpg',
+      'this is a face mask',
+      3
+    ),
   ];
 
   addToServiceCart(index: number) {

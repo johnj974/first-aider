@@ -132,24 +132,23 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">Line</th>
+              <th scope="col">Item</th>
+              <th scope="col">Cost</th>
             </tr>
           </thead>
           <tbody *ngFor="let product of checkoutCart; let i = index">
             <tr>
               <th scope="row">{{ i + 1 }}</th>
               <td>{{ product.title }}</td>
-              <td>€{{ product.cost }}</td>
+              <td>€ {{ product.cost }}</td>
             </tr>
           </tbody>
           <tbody *ngIf="checkoutCart.length > 0">
             <tr>
               <th>Total</th>
               <td></td>
-              <td>€{{ orderTotal }}</td>
+              <td>€ {{ orderTotal }}</td>
             </tr>
           </tbody>
         </table>
