@@ -1,7 +1,7 @@
 <section class="pt-5">
-  <div class="container py-5">
+  <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 py-5">
         <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
           <div class="form-group mb-3">
             <label for="course">Course</label>
@@ -119,16 +119,18 @@
             </button>
           </div>
         </form>
-        <hr />
-        <p *ngIf="formSubmitted; else submitMessage">
-          Thank You {{ name.value | titlecase }} for booking
-          {{ courseBookingInfo.title }}, we look forward to meeting you.
-        </p>
-        <ng-template #submitMessage>
-          <p>Please fill in all form inputs to submit booking form</p>
-        </ng-template>
+        <div class="px-4">
+          <hr />
+          <p *ngIf="formSubmitted; else submitMessage">
+            Thank You {{ name.value | titlecase }} for booking
+            {{ courseBookingInfo.title }}, we look forward to meeting you.
+          </p>
+          <ng-template #submitMessage>
+            <p>Please fill in all form inputs to submit booking form</p>
+          </ng-template>
+        </div>
       </div>
-      <div class="col-md-4 testimonial-column">
+      <div class="col-md-4 testimonial-column py-5">
         <h3 class="mb-4">First Aider Customer Testimonials</h3>
         <p class="mb-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.

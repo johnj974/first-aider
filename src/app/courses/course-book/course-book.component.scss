@@ -3,11 +3,15 @@
 
 form {
   padding: 0rem 2rem;
+
+  .form-control {
+    background-color: $color-paleBlue;
+  }
 }
 
-.form-control:disabled {
-  background-color: red;
-}
+// .form-control:disabled {
+//   background-color: red;
+// }
 
 label {
   font-size: 1.4rem;

@@ -4,6 +4,12 @@
   background-image: linear-gradient(to top right, $color-active, $color-blue);
   color: $color-white;
 
+  &-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+
   i.fa {
     color: $color-altOrange;
   }
@@ -20,8 +26,4 @@ h4 {
   &:hover {
     color: $color-white;
   }
-}
-
-.card-img-top {
-  max-height: 302px;
 }

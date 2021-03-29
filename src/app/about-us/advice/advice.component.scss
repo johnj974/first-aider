@@ -2,10 +2,6 @@
 @import "../../../styles/components/buttons";
 
 .advice {
-  height: 40rem;
   text-align: center;
   color: $color-blue;
-  &_text {
-    padding: 10rem 1rem;
-  }
 }
