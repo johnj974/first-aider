@@ -14,7 +14,7 @@ section {
   padding: 10rem;
   color: $color-white;
 
-  background-image: linear-gradient(to right, $color-active, $color-blue);
+  background-image: linear-gradient(to right, $color-blue, $color-active);
 
   & footer {
     color: $color-white;
@@ -38,5 +38,19 @@ section {
 @media only screen and (max-width: 768px) {
   .testimonial-static-text {
     padding: 0 auto;
+  }
+}
+
+//CAROUSEL LEFT TO RIGHT//
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .active.carousel-item-left,
+  .carousel-item-prev:not(.carousel-item-right) {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  .active.carousel-item-right,
+  .carousel-item-next:not(.carousel-item-left) {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
