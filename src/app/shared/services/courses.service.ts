@@ -9,11 +9,11 @@ export class CoursesService {
   }
 
   locationArray: string[] = [
-    'Red Cow Hotel, Dublin',
+    'Ashling Hotel, Dublin',
     'Glen Eagle Hotel, Kerry',
-    'Southern Hotel, Limerick',
-    'CorkBoi Hotel, Cork',
-    'MaySheep Hotel, Mayo',
+    'The Savoy Hotel, Limerick',
+    'The Montenotte, Cork',
+    'The Ellison, Mayo',
   ];
 
   randomLocation(array) {
@@ -29,7 +29,7 @@ export class CoursesService {
 
   coursesArray: Coursemodel[] = [
     new Coursemodel(
-      '../../../assets/images/first-aid.png',
+      'assets/images/first-aid.png',
       'First Aid Response',
       this.randomDate(new Date(2022, 0, 1), new Date()),
       '9.00 AM',
@@ -40,7 +40,7 @@ export class CoursesService {
       '€300'
     ),
     new Coursemodel(
-      '../../../assets/images/cpr.png',
+      'assets/images/cpr.png',
       'Cardiac First Response',
       this.randomDate(new Date(2022, 0, 1), new Date()),
       '9.00 AM',
@@ -51,7 +51,7 @@ export class CoursesService {
       '€120'
     ),
     new Coursemodel(
-      '../../../assets/images/first-aid-kit3.png',
+      'assets/images/first-aid-kit3.png',
       'Peadiatric First Aid',
       this.randomDate(new Date(2022, 0, 1), new Date()),
       '9.00 AM',
@@ -62,7 +62,7 @@ export class CoursesService {
       '€120'
     ),
     new Coursemodel(
-      '../../../assets/images/epipen-01.png',
+      'assets/images/epipen-01.png',
       'EpiPen Administration',
       this.randomDate(new Date(2022, 0, 1), new Date()),
       '9.00 AM',

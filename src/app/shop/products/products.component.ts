@@ -20,12 +20,9 @@ export class ProductsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.shopService.serviceCart = [];
     this.productArray = this.shopService.shopServiceArray;
   }
-
-  // onToShop() {
-  //   this.router.navigate(['/shop']);
-  // }
 
   onAddToCart(index: number) {
     this.cartArray.push(this.productArray[index]);
