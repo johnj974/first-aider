@@ -44,3 +44,9 @@ input.ng-invalid.ng-touched {
   border-left: 1px solid $color-crimson;
   border-bottom: 1px solid $color-crimson;
 }
+
+@media only screen and (max-width: 600px) {
+  .button-container {
+    text-align: center;
+  }
+}

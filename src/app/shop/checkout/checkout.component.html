@@ -113,18 +113,21 @@
             />
             <label for="area-code" class="form-label">Area Code</label>
           </div>
-          <button
-            class="btn btn-blue"
-            type="submit"
-            [disabled]="!checkOutForm.valid || checkoutCart.length === 0"
-          >
-            Place Order
-          </button>
-          <span *ngIf="orderPlaced; else instruction">
+          <div class="button-container">
+            <button
+              class="btn btn-blue"
+              type="submit"
+              [disabled]="!checkOutForm.valid || checkoutCart.length === 0"
+            >
+              Place Order
+            </button>
+          </div>
+          <hr />
+          <p *ngIf="orderPlaced; else instruction">
             Thank You {{ name.value | titlecase }} for your order
-          </span>
+          </p>
           <ng-template #instruction>
-            <span> You must have items in the cart to place an order </span>
+            <p>You must have items in the cart to place an order</p>
           </ng-template>
         </form>
       </div>
