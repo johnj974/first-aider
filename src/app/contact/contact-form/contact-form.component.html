@@ -58,13 +58,14 @@
             ngModel
             name="phone"
             required
+            pattern="^\d{10}$"
             #phoneInput="ngModel"
           />
           <div
             class="form-text small"
             *ngIf="!phoneInput.value && phoneInput.touched"
           >
-            Please enter a valid phone number.
+            Please enter a valid 10 digit phone number.
           </div>
           <label for="phone" class="form-label">Phone</label>
         </div>
@@ -105,7 +106,6 @@
           >
             Please enter a message.
           </div>
-          <!-- <label for="message" class="form-label">Message</label> -->
         </div>
 
         <div class="button-container">

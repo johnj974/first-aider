@@ -25,7 +25,10 @@ export class CheckoutComponent implements OnInit {
     this.checkOutForm = new FormGroup({
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      phone: new FormControl(null, Validators.required),
+      phone: new FormControl(null, [
+        Validators.required,
+        Validators.pattern('[0-9]{10}'),
+      ]),
       addressOne: new FormControl(null, Validators.required),
       addressTwo: new FormControl(null, Validators.required),
       areaCode: new FormControl(null),

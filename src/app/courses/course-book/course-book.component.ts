@@ -51,7 +51,10 @@ export class CourseBookComponent implements OnInit {
       userData: new FormGroup({
         name: new FormControl(null, Validators.required),
         email: new FormControl(null, [Validators.required, Validators.email]),
-        phone: new FormControl(null, Validators.required),
+        phone: new FormControl(null, [
+          Validators.required,
+          Validators.pattern('[0-9]{10}'),
+        ]),
       }),
     });
 
