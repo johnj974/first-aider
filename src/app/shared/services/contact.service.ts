@@ -13,9 +13,15 @@ export class Contactservice {
         'https://first-aider-27854-default-rtdb.europe-west1.firebasedatabase.app/contactInfo.json',
         contactInfo
       )
-      .subscribe((responseData) => {
-        console.log(responseData);
-      });
+      .subscribe(
+        (responseData) => {
+          console.log(responseData);
+        },
+        (error) => {
+          console.log(error.message);
+          console.log(error.statusText, error.error.error);
+        }
+      );
   }
 
   onRetrieveContact() {

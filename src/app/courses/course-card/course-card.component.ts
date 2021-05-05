@@ -19,6 +19,7 @@ export class CourseCardComponent implements OnInit {
 
   onShowCourse(id: number, title: string) {
     console.log(id, title);
-    this.router.navigate(['/courses/', id, title]);
+    const cleanTitle = title.replace(/ /g, '');
+    this.router.navigate(['/courses/', id, cleanTitle]);
   }
 }

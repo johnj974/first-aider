@@ -13,3 +13,17 @@
 li {
   font-size: 1.6rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .cov-info {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .row {
+    flex-flow: column-reverse;
+  }
+  .img-fluid {
+    margin-bottom: 1rem;
+  }
+}

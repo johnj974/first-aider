@@ -19,6 +19,9 @@ img {
     text-align: center;
     margin-bottom: 2rem;
   }
+  .row {
+    flex-flow: column-reverse;
+  }
 }
 
 @media only screen and (max-width: 768px) {

@@ -4,6 +4,8 @@ Site can be viewed at [First-Aider](https://johnj974.github.io/first-aider)
 
 A site for a fictional first aid training provider with differant pages showing the services they provide.
 
+<img src="src/assets/images/screenshot.png">
+
 ## Technologies Used
 
 This project was generated with:
