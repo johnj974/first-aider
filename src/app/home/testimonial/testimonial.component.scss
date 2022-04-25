@@ -6,7 +6,7 @@ section {
 }
 
 .testimonial {
-  height: 50rem;
+  height: 100%;
 }
 
 .testimonial-box {
@@ -38,6 +38,10 @@ section {
 @media only screen and (max-width: 768px) {
   .testimonial-static-text {
     padding: 0 auto;
+    text-align: center;
+  }
+  .testimonial {
+    height: 40rem;
   }
 }
 

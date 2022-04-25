@@ -27,11 +27,15 @@ export class CoursesService {
     return capturedCourse;
   }
 
+  retrieveCourseArray() {
+    return this.coursesArray.slice();
+  }
+
   coursesArray: Coursemodel[] = [
     new Coursemodel(
       'assets/images/first-aid.png',
       'First Aid Response',
-      this.randomDate(new Date(2022, 0, 1), new Date()),
+      this.randomDate(new Date(2024, 0, 1), new Date()),
       '9.00 AM',
       '10',
       '3 Days',
@@ -42,7 +46,7 @@ export class CoursesService {
     new Coursemodel(
       'assets/images/cpr.png',
       'Cardiac First Response',
-      this.randomDate(new Date(2022, 0, 1), new Date()),
+      this.randomDate(new Date(2024, 0, 1), new Date()),
       '9.00 AM',
       '10',
       '1 Day',
@@ -53,7 +57,7 @@ export class CoursesService {
     new Coursemodel(
       'assets/images/first-aid-kit3.png',
       'Peadiatric First Aid',
-      this.randomDate(new Date(2022, 0, 1), new Date()),
+      this.randomDate(new Date(2024, 0, 1), new Date()),
       '9.00 AM',
       '10',
       '1 day',

@@ -18,6 +18,6 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.courseList = this.coursesService.coursesArray;
+    this.courseList = this.coursesService.retrieveCourseArray();
   }
 }
